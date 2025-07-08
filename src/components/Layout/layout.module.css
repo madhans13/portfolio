@@ -1,0 +1,30 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: var(--content-width);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 6rem;
+  }
+
+  .container {
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+} 

@@ -1,0 +1,73 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  margin: 1rem auto;
+  z-index: 1000;
+  max-width: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.link {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #18181B;
+}
+
+.bookCall {
+  background: #18181B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.bookCall:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+
+  .bookCall {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+} 

@@ -1,0 +1,121 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 2rem 1rem 4rem 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 2.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  width: 100%;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  max-width: 620px;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.primaryButton {
+  background: #18181B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.primaryButton:hover {
+  opacity: 0.9;
+}
+
+.availabilityTag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.availabilityDot {
+  width: 6px;
+  height: 6px;
+  background: #16a34a;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+
+  .profileImage {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .title, .subtitle {
+    font-size: 2.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .primaryButton, .availabilityTag {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+} 

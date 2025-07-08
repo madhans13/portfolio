@@ -1,0 +1,76 @@
+.technologies {
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  width: 90%;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #18181B;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 180px;
+}
+
+.techItem:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2rem;
+  color: #18181B;
+}
+
+.techName {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #18181B;
+  text-align: center;
+}
+
+.proficiency {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .technologies {
+    padding: 2rem 1rem;
+    margin: 1.5rem auto;
+    width: 95%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .techItem {
+    padding: 0.75rem;
+  }
+} 
