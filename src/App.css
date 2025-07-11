@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #000000;
-  --secondary-color: #666666;
+  --primary-color: #ffffff; /* Changed from #000000 */
+  --secondary-color: #cccccc; /* Optional: Lighten the secondary color too */
   --accent-color: #18181B;
   --background-color: #ffffff;
   --max-width: 1200px;
@@ -24,6 +24,12 @@ body {
   color: var(--primary-color);
   background-color: var(--background-color);
   overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  background-image: url('./assets/10.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .app {
@@ -37,10 +43,20 @@ body {
 main {
   width: var(--content-width);
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* 1. Enhanced Translucent Background */
+  background: rgba(0, 0, 0, 0.2); /* A bit more opacity for a frosted look */
+  
+  /* 2. Increased Backdrop Filter for a Stronger Blur */
+  backdrop-filter: blur(20px); /* Increase the blur for a more pronounced effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+
+  /* 3. Subtle Border for a Glass Edge Effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Lighter border to catch the light */
+  
   border-radius: 20px;
+
+  /* 4. Add a Subtle Shadow for Depth */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
 
 section {
