@@ -1,3 +1,4 @@
+/* Header & Nav Wrapper (Unchanged) */
 .header {
   position: fixed;
   top: 2rem;
@@ -15,81 +16,85 @@
   justify-content: center;
 }
 
-.container {
+/* --- 1. The Glimmer Container --- */
+.nav .container {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(30px) saturate(120%) contrast(1.05);
-  -webkit-backdrop-filter: blur(30px) saturate(120%) contrast(1.05);
-  padding: 0.75rem 1.5rem;
-  border-radius: 26px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 
-     0 2px 10px rgba(0, 0, 0, 0.05),
-     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   pointer-events: auto;
+  
+  /* Dark, semi-transparent background */
+  background: rgba(20, 20, 25, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  
+  /* Positioning and overflow for the glimmer effect */
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.container:hover {
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(40px) saturate(140%) contrast(1.08);
-  -webkit-backdrop-filter: blur(40px) saturate(140%) contrast(1.08);
-  transform: scale(1.05);
+/* --- 2. The Glimmer Sweep Effect --- */
+.nav .container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px; /* Width of the glimmer */
+  height: 100%;
+  
+  /* A soft, angled white gradient */
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  
+  /* Start off-screen to the left */
+  transform: skewX(-25deg) translateX(-150%);
+  transition: transform 0.5s ease;
 }
 
-.link {
-  color: var(--primary-color);
+/* --- 3. Trigger the animation on hover --- */
+.nav .container:hover::before {
+  /* Move across the container to the right */
+  transform: skewX(-25deg) translateX(500%);
+}
+
+
+/* --- 4. Link and Button Styles --- */
+.nav .link {
+  color: var(--secondary-color);
   text-decoration: none;
   font-size: 1.1rem;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  z-index: 1; /* Ensures links are above the glimmer */
 }
 
-.link:hover {
-  opacity: 0.7;
+.nav .link:hover {
+  color: var(--primary-color);
 }
 
-.bookCall {
+.nav .bookCall {
   background: #18181B;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  margin-left: 0.5rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
 }
 
-.bookCall:hover {
-  opacity: 0.9;
+.nav .bookCall:hover {
+  background: #27272a;
+  transform: translateY(-2px);
 }
-
-@media (max-width: 768px) {
-  .header {
-    top: 1rem;
-  }
-  
-  .nav {
-    padding: 0 1rem;
-  }
-  
-  .container {
-    padding: 0.5rem 1rem;
-    gap: 1.5rem;
-  }
-  
-  .link {
-    font-size: 1rem;
-  }
-  
-  .bookCall {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.9rem;
-  }
-} 

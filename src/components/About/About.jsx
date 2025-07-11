@@ -1,20 +1,24 @@
 import React from 'react';
 import styles from './about.module.css';
-
+import ScrollReveal from '../../blocks/TextAnimations/ScrollReveal/ScrollReveal';
 const About = () => {
   return (
+    
     <section className={styles.about}>
+      
+    <div>
       <h2 className="section-title">About</h2>
-      <p className={styles.text}>
+      <ScrollReveal
+  baseOpacity={0}
+  enableBlur={true}
+  baseRotation={5}
+  blurStrength={10}
+  >
         I'm Mia Carter, a curious designer, coder, and storyteller. Currently a
         student at Springfield High School, but always exploring the limitless
         possibilities of creativity and technology.
-      </p>
-      <p className={styles.text}>
-        I thrive on transforming ideas into reality, whether it's crafting digital
-        interfaces, designing immersive visuals, or building websites that feel
-        effortless to use.
-      </p>
+        </ScrollReveal>
+      
       <div className={styles.photos}>
         <img 
           src="https://placehold.co/400x300" 
@@ -27,6 +31,8 @@ const About = () => {
           className={styles.photo}
         />
       </div>
+      </div>
+    
     </section>
   )
 }
