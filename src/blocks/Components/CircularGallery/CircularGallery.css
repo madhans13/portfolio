@@ -1,0 +1,23 @@
+/*
+	Installed from https://reactbits.dev/default/
+*/
+
+/* File: CircularGallery.css */
+
+.circular-gallery {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Ensures it's a positioning context */
+  overflow: hidden;
+  cursor: grab;
+}
+
+.circular-gallery:active {
+  cursor: grabbing;
+}
+
+/* This ensures the WebGL canvas fills the container */
+.circular-gallery canvas {
+    width: 100%;
+    height: 100%;
+}

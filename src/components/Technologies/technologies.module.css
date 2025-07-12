@@ -1,11 +1,12 @@
 .technologies {
   padding: 3rem 2rem;
   margin: 2rem auto;
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
-  width: 90%;
+  width: 80%;
+  height: 300px;
 }
 
 .title {
@@ -13,7 +14,7 @@
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
-  color: #18181B;
+  color: #ffffff;
 }
 
 .grid {
