@@ -1,0 +1,277 @@
+/* 	Installed from https://reactbits.dev/default/ */
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #555;
+  border-radius: 24px;
+  padding: 16px;
+  --outer-r: 24px;
+  --p-distance: 12px;
+  
+  /* Enhanced background with gradient and subtle pattern */
+  background: linear-gradient(135deg, #1a0b2e 0%, #16213e 50%, #0f3460 100%);
+  
+  /* Add subtle animated background pattern */
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
+  
+  /* Subtle animation for the background */
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+  0%, 100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  50% { background-position: 100% 100%, 0% 0%, 25% 75%; }
+}
+
+/* Alternative: Add a decorative header section */
+.carousel-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(147, 51, 234, 0.1) 25%, 
+    rgba(59, 130, 246, 0.1) 50%, 
+    rgba(147, 51, 234, 0.1) 75%, 
+    transparent 100%
+  );
+  border-radius: 24px 24px 0 0;
+  
+}
+
+/* White dot on top left inside the black card area */
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+/* Add additional floating elements */
+.carousel-container {
+  position: relative;
+}
+
+.carousel-floating-element {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: floatAround 8s ease-in-out infinite;
+}
+
+.carousel-floating-element:nth-child(1) {
+  top: 15px;
+  left: 25px;
+  width: 20px;
+  height: 20px;
+  background: rgba(147, 51, 234, 0.3);
+  animation-delay: 0s;
+}
+
+.carousel-floating-element:nth-child(2) {
+  top: 35px;
+  right: 60px;
+  width: 15px;
+  height: 15px;
+  background: rgba(59, 130, 246, 0.3);
+  animation-delay: 2s;
+}
+
+.carousel-floating-element:nth-child(3) {
+  top: 10px;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: rgba(168, 85, 247, 0.2);
+  animation-delay: 4s;
+}
+
+@keyframes floatAround {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.6;
+  }
+  33% { 
+    transform: translateY(-8px) translateX(5px) scale(1.1);
+    opacity: 0.8;
+  }
+  66% { 
+    transform: translateY(5px) translateX(-3px) scale(0.9);
+    opacity: 0.4;
+  }
+}
+
+/* Option 3: Add a subtle top border accent */
+.carousel-container-accent {
+  position: relative;
+}
+
+.carousel-container-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #8b5cf6 20%, 
+    #3b82f6 50%, 
+    #8b5cf6 80%, 
+    transparent 100%
+  );
+  border-radius: 24px 24px 0 0;
+  z-index: 1;
+}
+
+/* Enhanced carousel track with better spacing */
+.carousel-track {
+  display: flex;
+  margin-top: 20px; /* Add some space from the top */
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid #555;
+  border-radius: calc(var(--outer-r) - var(--p-distance));
+  background-color: #0d0716;
+  overflow: hidden;
+  cursor: grab;
+  
+  /* Add subtle inner glow */
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-item:active {
+  cursor: grabbing;
+}
+
+.carousel-container.round {
+  border: 1px solid #555;
+}
+
+.carousel-item.round {
+  background-color: #0d0716;
+  position: relative;
+  bottom: 0.1em;
+  border: 1px solid #555;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-item-header.round {
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-indicators-container.round {
+  position: absolute;
+  z-index: 2;
+  bottom: 3em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-indicator.active {
+  background-color: #333333;
+}
+
+.carousel-indicator.inactive {
+  background-color: rgba(51, 51, 51, 0.4);
+}
+
+.carousel-item-header {
+  margin-bottom: 16px;
+  padding: 20px;
+  padding-top: 20px;
+}
+
+.carousel-icon-container {
+  display: flex;
+  height: 28px;
+  width: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.carousel-icon {
+  height: 16px;
+  width: 16px;
+  color: #060010;
+}
+
+.carousel-item-content {
+  padding: 20px;
+  padding-bottom: 20px;
+}
+
+.carousel-item-title {
+  margin-bottom: 4px;
+  font-weight: 900;
+  font-size: 18px;
+  color: #fff;
+}
+
+.carousel-item-description {
+  font-size: 14px;
+  color: #fff;
+}
+
+.carousel-indicators-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel-indicators {
+  margin-top: 16px;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.carousel-indicator {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.carousel-indicator.active {
+  background-color: #fff;
+}
+
+.carousel-indicator.inactive {
+  background-color: #555;
+}
