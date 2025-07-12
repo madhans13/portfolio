@@ -33,6 +33,9 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .description {
@@ -91,31 +94,31 @@
   .hero {
     padding: 2rem 1rem 3rem 1rem;
   }
-
+  
   .profileImage {
     width: 100px;
     height: 100px;
     margin-bottom: 1.5rem;
   }
-
+  
   .title, .subtitle {
     font-size: 2.25rem;
   }
-
+  
   .description {
     font-size: 1rem;
     padding: 0;
   }
-
+  
   .buttons {
     flex-direction: column;
     width: 100%;
     gap: 0.75rem;
   }
-
+  
   .primaryButton, .availabilityTag {
     width: 100%;
     text-align: center;
     justify-content: center;
   }
-} 
+}
