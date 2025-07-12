@@ -1,6 +1,7 @@
 import styles from './contact.module.css'
 import { FaEnvelope, FaUser } from 'react-icons/fa'
 
+import CircularGallery from '../../blocks/Components/CircularGallery2/CircularGallery2'
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -14,7 +15,6 @@ const Contact = () => {
         I'm always interested in exploring new opportunities and collaborating on exciting projects.
         Feel free to reach out if you'd like to discuss potential collaborations or just say hello!
       </p>
-      
       <div className={styles.formContainer}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>

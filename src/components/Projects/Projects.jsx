@@ -1,5 +1,5 @@
 import styles from './projects.module.css'
-
+import TiltedCard from '../../blocks/Components/TiltedCard/TiltedCard';
 const Projects = () => {
   const projects = [
     {
@@ -26,21 +26,87 @@ const Projects = () => {
     <section className={styles.projects}>
       <h2 className="section-title">Here's What I've Been Up To</h2>
       <div className={styles.grid}>
-        {projects.map((project, index) => (
-          <div key={index} className={styles.project}>
-            <div className={styles.imageContainer}>
-              <img src={project.image} alt={project.title} className={styles.image} />
-            </div>
-            <div className={styles.content}>
-              <h3 className={styles.title}>{project.title}</h3>
-              <p className={styles.description}>{project.description}</p>
-              <a href={project.link} className={styles.viewProject}>
-                View Project <span className={styles.arrow}>→</span>
-              </a>
-            </div>
-          </div>
-        ))}
+      <TiltedCard
+        imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+        altText="Kendrick Lamar - GNX Album Cover"
+        captionText="Kendrick Lamar - GNX"
+        containerHeight="300px"
+        containerWidth="300px"
+        imageHeight="300px"
+        imageWidth="300px"
+        rotateAmplitude={12}
+        scaleOnHover={1.2}
+        showMobileWarning={false}
+        showTooltip={true}
+        displayOverlayContent={true}
+        overlayContent={
+          <p className="tilted-card-overlay-content">
+            Chef Claude
+          </p>
+        }
+      />
+        <TiltedCard
+          imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+          altText="Kendrick Lamar - GNX Album Cover"
+          projectTitle="Chef Claude"
+          projectDescription="A Project About efficient cleaning of the food"
+          tags={["React", "Food", "AI"]}
+          containerHeight="300px"
+          containerWidth="300px"
+          imageHeight="300px"
+          imageWidth="300px"
+          rotateAmplitude={12}
+          scaleOnHover={1.2}
+          showMobileWarning={false}
+          showTooltip={true}
+          displayOverlayContent={true}
+          overlayContent={
+            <p className="tilted-card-overlay-content">
+              Chef Claude
+            </p>
+          }
+        />
+      <TiltedCard
+        imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+        altText="Kendrick Lamar - GNX Album Cover"
+        captionText="Kendrick Lamar - GNX"
+        containerHeight="300px"
+        containerWidth="300px"
+        imageHeight="300px"
+        imageWidth="300px"
+        rotateAmplitude={12}
+        scaleOnHover={1.2}
+        showMobileWarning={false}
+        showTooltip={true}
+        displayOverlayContent={true}
+        overlayContent={
+          <p className="tilted-card-overlay-content">
+            fixit
+          </p>
+        }
+      />
+      <TiltedCard
+        imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+        altText="Kendrick Lamar - GNX Album Cover"
+        captionText="Kendrick Lamar - GNX"
+        containerHeight="300px"
+        containerWidth="300px"
+        imageHeight="300px"
+        imageWidth="300px"
+        rotateAmplitude={12}
+        scaleOnHover={1.2}
+        showMobileWarning={false}
+        showTooltip={true}
+        displayOverlayContent={true}
+        overlayContent={
+          <p className="tilted-card-overlay-content">
+            Complete deployment
+          </p>
+        }
+      />
+        
       </div>
+      
     </section>
   )
 }

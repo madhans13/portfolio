@@ -1,0 +1,154 @@
+.workExperience {
+  padding: 4rem 0;
+  max-width: 1400px; /* Increased for wider layout */
+  margin: 0 auto;
+}
+
+/* Main content container for left-right layout */
+.mainContent {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Left side - Gallery Container */
+.galleryContainer {
+  position: relative;
+  flex: 0 0 50%; /* Fixed width of 50% */
+  min-width: 400px; /* Minimum width for gallery */
+  /* max-height: 400px; */
+  /* Glassmorphism highlight effect */
+  background: rgba(25, 26, 30, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Right side - Content Container */
+.contentContainer {
+  flex: 1; /* Takes remaining space */
+  padding-left: 2rem;
+}
+
+.mainTitle {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.intro {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.designSection {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.designTypes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.designItem {
+  padding: 0;
+}
+
+.designItem h5 {
+  color: #4a9eff;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.designItem p {
+  color: #c0c0c0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.philosophy {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0;
+}
+
+.tools {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Fading edges for gallery */
+.galleryContainer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, #0F1014, transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.galleryContainer::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to left, #0F1014, transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .galleryContainer {
+    flex: none;
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .contentContainer {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .workExperience {
+    padding: 2rem 1rem;
+  }
+  
+  .timelineItem {
+    padding: 1.5rem;
+  }
+  
+  .timelineContent h3 {
+    font-size: 1.2rem;
+  }
+}
