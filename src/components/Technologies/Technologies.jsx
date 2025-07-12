@@ -1,33 +1,14 @@
 import React from 'react';
 import styles from './technologies.module.css';
-import { FaDocker, FaAws, FaJenkins, FaGitAlt, FaLinux } from 'react-icons/fa';
-import { SiKubernetes, SiAnsible, SiTerraform, SiGrafana, SiPrometheus } from 'react-icons/si';
-
-const technologies = [
-  { name: 'Docker', icon: FaDocker, proficiency: 'Advanced' },
-  { name: 'Kubernetes', icon: SiKubernetes, proficiency: 'Intermediate' },
-  { name: 'AWS', icon: FaAws, proficiency: 'Advanced' },
-  { name: 'Jenkins', icon: FaJenkins, proficiency: 'Advanced' },
-  { name: 'Ansible', icon: SiAnsible, proficiency: 'Intermediate' },
-  { name: 'Terraform', icon: SiTerraform, proficiency: 'Advanced' },
-  { name: 'Git', icon: FaGitAlt, proficiency: 'Advanced' },
-  { name: 'Linux', icon: FaLinux, proficiency: 'Advanced' },
-  { name: 'Grafana', icon: SiGrafana, proficiency: 'Intermediate' },
-  { name: 'Prometheus', icon: SiPrometheus, proficiency: 'Intermediate' }
-];
-
+import CircularGallery from '../../blocks/Components/CircularGallery/CircularGallery'
+import '../../blocks/Components/CircularGallery/CircularGallery.css'
+import ShinyText from '../../blocks/TextAnimations/ShinyText/ShinyText';
 const Technologies = () => {
   return (
     <section className={styles.technologies}>
-      <h2 className={styles.title}>DevOps Technologies</h2>
-      <div className={styles.grid}>
-        {technologies.map((tech, index) => (
-          <div key={index} className={styles.techItem}>
-            <tech.icon className={styles.icon} />
-            <h3 className={styles.techName}>{tech.name}</h3>
-            <p className={styles.proficiency}>{tech.proficiency}</p>
-          </div>
-        ))}
+      <h1 className={styles.title}><ShinyText text="Technologies Known" disabled={false} speed={3} className='custom-class' /></h1>
+      <div style={{ height: '500px', position: 'relative' }}>
+        <CircularGallery bend={0} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
       </div>
     </section>
   );
