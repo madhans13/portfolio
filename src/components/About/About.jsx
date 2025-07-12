@@ -12,7 +12,7 @@ const About = () => {
   baseOpacity={0}
   enableBlur={true}
   baseRotation={5}
-  blurStrength={10}
+  blurStrength={15}
   >
         I'm Mia Carter, a curious designer, coder, and storyteller. Currently a
         student at Springfield High School, but always exploring the limitless

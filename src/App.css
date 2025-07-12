@@ -1,11 +1,12 @@
 :root {
-  --primary-color: #ffffff; /* Changed from #000000 */
-  --secondary-color: #cccccc; /* Optional: Lighten the secondary color too */
+  --primary-color: #ffffff;
+  --secondary-color: #e5e7eb;
   --accent-color: #18181B;
   --background-color: #ffffff;
   --max-width: 1200px;
-  --content-width: 65%;
+  --content-width: 155%;
   --navbar-height: 100px;
+  /* Gentle falloff */
 }
 
 * {
@@ -35,7 +36,6 @@ body {
 .app {
   width: 100%;
   min-height: 100vh;
-  padding-top: 8rem;
   display: flex;
   justify-content: center;
 }
@@ -43,21 +43,21 @@ body {
 main {
   width: var(--content-width);
   padding: 2rem;
-  /* 1. Enhanced Translucent Background */
-  background: rgba(0, 0, 0, 0.2); /* A bit more opacity for a frosted look */
   
-  /* 2. Increased Backdrop Filter for a Stronger Blur */
-  backdrop-filter: blur(20px); /* Increase the blur for a more pronounced effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  /* Original Glass Background (Unchanged) */
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
 
-  /* 3. Subtle Border for a Glass Edge Effect */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Lighter border to catch the light */
+  border-radius: 20px; 
   
-  border-radius: 20px;
-
-  /* 4. Add a Subtle Shadow for Depth */
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  
+  /* --- UPDATED: Premium feathering on sides and bottom, with a sharp top edge --- */
+
 }
+
+
 
 section {
   margin: 2rem 0;
@@ -101,6 +101,8 @@ button {
   transform: translateY(-1px);
 }
 
+
+
 /* Media Queries */
 @media (max-width: 1200px) {
   :root {
@@ -124,7 +126,7 @@ button {
 
   section {
     padding: 2rem 0;
-}
+  }
 
   .section-title {
     font-size: 2rem;
