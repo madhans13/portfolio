@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './about.module.css';
 import ScrollReveal from '../../blocks/TextAnimations/ScrollReveal/ScrollReveal';
+import ScrollFloat from '../../blocks/TextAnimations/ScrollFloat/ScrollFloat';
 const About = () => {
   return (
     
@@ -8,29 +9,16 @@ const About = () => {
       
     <div>
       <h2 className="section-title">About</h2>
-      <ScrollReveal
-  baseOpacity={0}
-  enableBlur={true}
-  baseRotation={5}
-  blurStrength={15}
-  >
-        I'm Mia Carter, a curious designer, coder, and storyteller. Currently a
-        student at Springfield High School, but always exploring the limitless
-        possibilities of creativity and technology.
-        </ScrollReveal>
+      <ScrollFloat
+          animationDuration={1}
+          ease='back.inOut(2)'
+          scrollStart='center bottom+=50%'
+          scrollEnd='bottom bottom-=40%'
+          stagger={0.03}
+        >
+          I'm Madhan , currently pursuing Final year Artificial Intelligence and Machine Learning at Bannari Amman Institute of Technology!
+        </ScrollFloat>
       
-      <div className={styles.photos}>
-        <img 
-          src="https://placehold.co/400x300" 
-          alt="Photography sample 1" 
-          className={styles.photo}
-        />
-        <img 
-          src="https://placehold.co/400x300" 
-          alt="Photography sample 2" 
-          className={styles.photo}
-        />
-      </div>
       </div>
     
     </section>
