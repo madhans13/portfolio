@@ -1,7 +1,4 @@
-/*
-	Installed from https://reactbits.dev/default/
-*/
-
+/* Installed from https://reactbits.dev/default/ */
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./TiltedCard.css";
@@ -16,6 +13,8 @@ export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
   captionText = "",
+  tags = [], // Add tags prop for technology stack
+  githubLink = null, // Add GitHub link prop
   containerHeight = "300px",
   containerWidth = "100%",
   imageHeight = "300px",
@@ -77,10 +76,16 @@ export default function TiltedCard({
     rotateFigcaption.set(0);
   }
 
+  function handleClick() {
+    if (githubLink) {
+      window.open(githubLink, '_blank', 'noopener,noreferrer');
+    }
+  }
+
   return (
     <figure
       ref={ref}
-      className="tilted-card-figure"
+      className={`tilted-card-figure ${githubLink ? 'tilted-card-clickable' : ''}`}
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -88,6 +93,7 @@ export default function TiltedCard({
       onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       {showMobileWarning && (
         <div className="tilted-card-mobile-alert">
@@ -126,13 +132,26 @@ export default function TiltedCard({
         <motion.figcaption
           className="tilted-card-caption"
           style={{
-            x,
-            y,
             opacity,
             rotate: rotateFigcaption,
           }}
         >
-          {captionText}
+          <div className="tilted-card-caption-content">
+            <p className="tilted-card-description">{captionText}</p>
+            {tags && tags.length > 0 && (
+              <div className="tilted-card-tech-stack">
+                <h4 className="tilted-card-tech-title">Tech Stack:</h4>
+                <div className="tilted-card-tags">
+                  {tags.map((tag, index) => (
+                    <span key={index} className="tilted-card-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+          </div>
         </motion.figcaption>
       )}
     </figure>

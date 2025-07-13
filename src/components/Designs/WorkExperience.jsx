@@ -1,10 +1,11 @@
 import styles from './workexperience.module.css'
 import CircularGallery from '../../blocks/Components/CircularGallery2/CircularGallery2'
 
-const WorkExperience = () => {
+const WorkExperience = ({ id }) => {
   return (
-    <section className={styles.workExperience}>
-      <h2 className="section-title">Other than Tech</h2>
+    <section id={id} className={styles.workExperience}>
+      
+      <h2 className={styles.mainTitle2}>Other than Tech</h2>
       <div className={styles.mainContent}>
         {/* Left side - Gallery Container */}
         <div className={styles.galleryContainer}>
@@ -15,11 +16,9 @@ const WorkExperience = () => {
         
         {/* Right side - Content */}
         <div className={styles.contentContainer}>
-          <h3 className={styles.mainTitle}>Graphic Design Passion</h3>
+          <h3 className={styles.mainTitle}>Graphic Design &lt;3</h3>
           <p className={styles.intro}>
-            Welcome to my creative world! I'm passionate about graphic design and visual storytelling. 
-            Through colors, typography, and imagery, I bring ideas to life and create meaningful connections 
-            with audiences.
+            Welcome to my creative world! I love creating posters for fun. It's become a passion of mine to experiment with colors, typography, and layouts. I enjoy making posters for movies, events, or just random creative ideas that pop into my head.
           </p>
           
          

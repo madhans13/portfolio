@@ -9,7 +9,8 @@ import image4 from '../../../assets/poster4.png';
 import image5 from '../../../assets/poster5.png';
 import image6 from '../../../assets/poster6.png';
 import image7 from '../../../assets/poster7.png';
-
+import image8 from '../../../assets/poster8.png';
+import image9 from '../../../assets/poster9.jpg';
 function debounce(func, wait) {
   let timeout;
   return function (...args) {
@@ -367,6 +368,8 @@ class App {
       { image: image5, text: "TVK Vijay" },
       { image: image6, text: "No Sexual Violence" },
       { image: image7, text: "Barathanatyam" },
+      { image: image9, text: "Barathanatyam" },
+      { image: image8, text: "Barathanatyam" },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

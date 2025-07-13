@@ -7,9 +7,9 @@ import StarBorder from '../../blocks/Animations/StarBorder/StarBorder'
 const handleAnimationComplete = () => {
   console.log('Animation completed!');
 };
-const Hero = () => {
+const Hero = ({ id }) => {
   return (
-    <section className={styles.hero}>
+    <section id={id} className={styles.hero}>
        
       <img 
         src={profileImage} 

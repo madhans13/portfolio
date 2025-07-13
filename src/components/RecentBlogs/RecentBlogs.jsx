@@ -109,7 +109,7 @@ const CarouselComponent = () => {
 
   return (
     <section style={{ padding: '40px 20px' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '40px', color: '#fff' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '40px', color: '#fff' ,marginTop:'8rem' }}>
         Recent Thoughts
       </h1>
       
@@ -121,27 +121,7 @@ const CarouselComponent = () => {
         margin: '0 auto',
         flexWrap: 'wrap'
       }}>
-        {/* Left side - Carousel */}
-        <div style={{
-          flex: '1',
-          minWidth: '400px',
-          height: '600px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}>
-          <Carousel
-            items={posts}
-            baseWidth={400}
-            autoplay={true}
-            autoplayDelay={3500}
-            pauseOnHover={true}
-            loop={true}
-            round={false}
-          />
-        </div>
-
-        {/* Right side - Content */}
+        {/* Left side - Content */}
         <div style={{
           flex: '1',
           minWidth: '300px',
@@ -163,7 +143,7 @@ const CarouselComponent = () => {
             marginBottom: '30px',
             color: '#d1d5db'
           }}>
-            I write about tech, development, and my journey as a developer. 
+            I write about tech, development, and deployments. 
             Check out my latest articles on Medium.
           </p>
           
@@ -178,10 +158,30 @@ const CarouselComponent = () => {
               fontSize: '1.1rem',
               color: '#fbbf24'
             }}>
-              <span>--- </span>Latest posts 
+              <span></span>Latest posts --- 
             </span>
           </div>
           
+        </div>
+
+        {/* Right side - Carousel */}
+        <div style={{
+          flex: '1',
+          minWidth: '400px',
+          height: '600px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <Carousel
+            items={posts}
+            baseWidth={400}
+            autoplay={true}
+            autoplayDelay={3500}
+            pauseOnHover={true}
+            loop={true}
+            round={false}
+          />
         </div>
       </div>
     </section>

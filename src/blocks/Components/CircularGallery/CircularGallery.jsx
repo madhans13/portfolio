@@ -376,44 +376,72 @@ class App {
         text: "Kubernetes",
       },
       {
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
-        text: "Jenkins",
-      },
-      {
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg",
-        text: "Ansible",
-      },
-      {
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
-        text: "Terraform",
-      },
-      {
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
         text: "Git",
       },
       {
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg",
-        text: "Prometheus",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
+        text: "GitHub Actions",
       },
       {
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg",
-        text: "Grafana",
+        image: "https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/assets/logo.png",
+        text: "ArgoCD",
       },
       {
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
-        text: "AWS",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        text: "HTML",
       },
       {
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-        text: "Google Cloud",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        text: "CSS",
       },
       {
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-        text: "Azure",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        text: "JavaScript",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        text: "React JS",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+        text: "Bootstrap",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+        text: "jQuery",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        text: "SQL",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+        text: "Linux",
       },
       {
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
         text: "Nginx",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+        text: "Bash",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        text: "Java",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+        text: "C",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        text: "Python",
+      },
+      {
+        image: "https://cdn.jsdelivr.net/gh/cncf/artwork/projects/helm/icon/color/helm-icon-color.svg",
+        text: "Helm",
       },
     ];
 
