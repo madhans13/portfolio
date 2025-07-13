@@ -130,17 +130,17 @@ button {
 /* Media Queries */
 @media (max-width: 1200px) {
   :root {
-    --content-width: 75%;
+    --content-width: 155%;
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --content-width: 90%;
+    --content-width: 100%;
   }
 
   .app {
-    padding-top: 6rem;
+    padding-top: 0rem;
   }
 
   main {
