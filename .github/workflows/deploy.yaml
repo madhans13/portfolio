@@ -1,0 +1,42 @@
+name: CI-CD with Docker and ArgoCD
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  IMAGE_NAME: madhan13/portfolio  # Docker Hub or GHCR
+  K8S_MANIFEST_PATH: k8s/deployment.yaml
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+    - name: Set image tag
+      id: image_tag
+      run: echo "IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
+
+    - name: Build and push Docker image
+      run: |
+        docker build -t $IMAGE_NAME:$IMAGE_TAG .
+        docker push $IMAGE_NAME:$IMAGE_TAG
+
+    - name: Update image tag in deployment.yaml
+      run: |
+        sed -i "s|image: .*$|image: $IMAGE_NAME:$IMAGE_TAG|g" $K8S_MANIFEST_PATH
+
+    - name: Commit and push updated deployment.yaml
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add $K8S_MANIFEST_PATH
+        git commit -m "Update image to $IMAGE_TAG"
+        git push
