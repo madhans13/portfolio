@@ -1,5 +1,5 @@
 import styles from './hero.module.css'
-import profileImage from '../../assets/Profile.png'
+import profileImage from '../../assets/profile.png'
 import ShinyText from '../../blocks/TextAnimations/ShinyText/ShinyText'
 import BlurText from "../../blocks/TextAnimations/BlurText/BlurText";
 import FuzzyText from '../../blocks/TextAnimations/FuzzyText/FuzzyText';
