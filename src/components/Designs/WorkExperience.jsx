@@ -4,8 +4,6 @@ import CircularGallery from '../../blocks/Components/CircularGallery2/CircularGa
 const WorkExperience = ({ id }) => {
   return (
     <section id={id} className={styles.workExperience}>
-      
-      <h2 className={styles.mainTitle2}>Other than Tech</h2>
       <div className={styles.mainContent}>
         {/* Left side - Gallery Container */}
         <div className={styles.galleryContainer}>
