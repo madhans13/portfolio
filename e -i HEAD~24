@@ -1,0 +1,25 @@
+[33mdc98301[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m fixed a bug
+[33m3557f5f[m Update image to 1752429993
+[33m07b28a1[m Fixed some compatibility issue for the small screens
+[33med881d4[m Update image to 1752428102
+[33m88c1b44[m removed top padding in the hero section
+[33mfca70f3[m Update image to 1752422199
+[33mc83bae3[m Final code before GitHub Pages deploy
+[33ma8948a0[m Update image to 1752421180
+[33meb134e5[m fixed build issue
+[33m79f5938[m refined navigation and project section
+[33m2144c78[m added Medium blog carousel
+[33madc26d9[m added Design field
+[33mb39ce9f[m added techstack section
+[33mb8f4726[m Update image to 1752308305
+[33ma5e9de2[m moved navbar to the bottom and some improvements
+[33mbd4074a[m added glass effect and animated components
+[33mb0e1a76[m Update image to 1752263795
+[33ma1ecb51[m made some changes
+[33m14cab7c[m Update image to 1752261334
+[33m9bd8ebd[m name changed
+[33m4b67c2b[m name changed
+[33mbb3c1eb[m added github Actions
+[33m8c285c8[m increased replicas
+[33mb3be6ca[m added deployments and service yaml
+[33m800c5a4[m initial portfolio

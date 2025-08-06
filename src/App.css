@@ -46,7 +46,8 @@ body {
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
   background-image: url('./assets/10.jpg');
-  
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
   /* --- MODIFICATIONS FOR LIVE EFFECT --- */
   background-size: 110% 110%; /* Slightly zoom in to prevent showing edges */
   background-position: center;
@@ -54,7 +55,9 @@ body {
   background-attachment: fixed;
   animation: gentleFloat 30s ease-in-out infinite; /* Apply the animation */
 }
-
+body::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari and Opera */
+}
 
 .app {
   
