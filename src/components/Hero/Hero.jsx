@@ -11,19 +11,18 @@ const Hero = ({ id }) => {
   return (
     <section id={id} className={styles.hero}>
        
-      <img 
+      {/* <img 
         src={profileImage} 
         alt="Profile" 
         className={styles.profileImage} 
-      />
-      <h1 className={styles.subtitle}><BlurText
-        text="Hey I'm Madhan"
-        delay={150}
-        animateBy="words"
-        direction="top"
-        onAnimationComplete={handleAnimationComplete}
-        className="text-2xl mb-8"
-      /></h1>
+      /> */}
+      <h1 className={styles.subtitle}><FuzzyText
+      baseIntensity={0.2}
+      hoverIntensity={0.5}
+      enableHover={true}
+    >
+      Hi I'm Madhan
+    </FuzzyText></h1>
       <h2 className={styles.subtitle}><FuzzyText
       baseIntensity={0.2}
       hoverIntensity={0.5}
